@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #6e8efb, #4a6cf7);
+            color: white;
+            padding: 40px 20px;
+            border-radius: 0 0 20px 20px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header img {
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        header a:hover {
+            text-decoration: underline;
+        }
+
+        #addCardBtn {
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #6e8efb, #4a6cf7);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1em;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            margin-bottom: 20px;
+        }
+
+        #addCardBtn:hover {
+            background: linear-gradient(135deg, #4a6cf7, #6e8efb);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .card {
+            background: linear-gradient(145deg, #ffffff, #f9f9f9);
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            margin-bottom: 20px;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            font-size: 1.4em;
+            color: #333;
+        }
+
+        .card img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 1em;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .card button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background: linear-gradient(135deg, #6e8efb, #4a6cf7);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            margin-top: 10px;
+            font-size: 1em;
+            transition: background 0.3s ease;
+        }
+
+        .card button:hover {
+            background: linear-gradient(135deg, #4a6cf7, #6e8efb);
+        }
+
+        .card-menu {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 1.5em;
+            color: #666;
+        }
+
+        .card-menu ul {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px 0;
+            list-style: none;
+            margin: 0;
+            z-index: 1;
+        }
+
+        .card-menu ul li {
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 0.9em;
+        }
+
+        .card-menu ul li:hover {
+            background-color: #f1f1f1;
+        }
+
+        #cardsContainer {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            width: 400px;
+            max-width: 90%;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .modal-content h2 {
+            margin-top: 0;
+            font-size: 1.8em;
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .modal-content label {
+            display: block;
+            font-size: 1em;
+            color: #555;
+            margin-bottom: 8px;
+        }
+
+        .modal-content input[type="text"],
+        .modal-content textarea,
+        .modal-content input[type="file"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1em;
+            color: #333;
+            background-color: #f9f9f9;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .modal-content input[type="text"]:focus,
+        .modal-content textarea:focus,
+        .modal-content input[type="file"]:focus {
+            border-color: #6e8efb;
+            box-shadow: 0 0 8px rgba(110, 142, 251, 0.5);
+            outline: none;
+        }
+
+        .modal-content textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .modal-content input[type="file"] {
+            padding: 10px;
+            background-color: #fff;
+        }
+
+        .modal-content .button-group {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .modal-content button {
+            flex: 1;
+            padding: 12px;
+            background: linear-gradient(135deg, #6e8efb, #4a6cf7);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .modal-content button:hover {
+            background: linear-gradient(135deg, #4a6cf7, #6e8efb);
+            transform: translateY(-2px);
+        }
+
+        .modal-content button#closeModalBtn {
+            background: linear-gradient(135deg, #ff6b6b, #ff4757);
+        }
+
+        .modal-content button#closeModalBtn:hover {
+            background: linear-gradient(135deg, #ff4757, #ff6b6b);
+        }
+
+        #viewModal .modal-content img {
+            max-width: 100%;
+            max-height: 300px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            object-fit: cover; /* lembrete pra mim: Garante que a imagem cubra o espaço sem distorcer */
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            .card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- põe uma imagem legal sua -->
+        <img src="avatar.png" alt="Foto de Perfil"> 
+        <div>
+            <!-- substitua por seu nome e sobrenome -->
+            <h1>Name Sobrenome</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur orci enim, auctor nec lectus ac, laculis euismod sem. Fusce justo lorem, maximus vitae tincidunt eu, vulputate ut dolor.</p>
+            <p>
+            <!-- substitua o latim por uma breve descrição sua -->
+                <a href="#">LinkedIn</a> | 
+                <a href="#">Github</a> | 
+                <a href="#">Email</a>
+                <!-- substitua os '#' pelas urls de suas redes sociais -->
+            </p>
+        </div>
+    </header>
+
+    <button id="addCardBtn">Adicionar Card</button>
+
+    <div id="cardsContainer">
+        <!-- Cards serão inseridos aqui -->
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h2>Adicionar Card</h2>
+            <label for="cardTitle">Título</label>
+            <input type="text" id="cardTitle" placeholder="Digite o título">
+
+            <label for="cardContent">Conteúdo</label>
+            <textarea id="cardContent" placeholder="Digite o conteúdo"></textarea>
+
+            <label for="cardImage">Imagem (opcional)</label>
+            <input type="file" id="cardImage" accept="image/*">
+
+            <div class="button-group">
+                <button id="saveCardBtn">Salvar</button>
+                <button id="closeModalBtn">Fechar</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="viewModal" class="modal">
+        <div class="modal-content">
+            <h2 id="viewModalTitle"></h2>
+            <img id="viewModalImage" src="" alt="Imagem do Card" style="display: none;">
+            <p id="viewModalContent"></p>
+            <button id="closeViewModalBtn">Fechar</button>
+        </div>
+    </div>
+
+    <script>
+        const cardsContainer = document.getElementById('cardsContainer');
+        const modal = document.getElementById('modal');
+        const viewModal = document.getElementById('viewModal');
+        const addCardBtn = document.getElementById('addCardBtn');
+        const saveCardBtn = document.getElementById('saveCardBtn');
+        const closeModalBtn = document.getElementById('closeModalBtn');
+        const closeViewModalBtn = document.getElementById('closeViewModalBtn');
+        const cardTitle = document.getElementById('cardTitle');
+        const cardContent = document.getElementById('cardContent');
+        const cardImage = document.getElementById('cardImage');
+        const viewModalTitle = document.getElementById('viewModalTitle');
+        const viewModalImage = document.getElementById('viewModalImage');
+        const viewModalContent = document.getElementById('viewModalContent');
+
+        function loadCards() {
+            const cards = JSON.parse(localStorage.getItem('cards')) || [];
+            cards.forEach(card => {
+                addCardToDOM(card.title, card.content, card.image);
+            });
+        }
+
+        function addCardToDOM(title, content, image) {
+            const card = document.createElement('div');
+            card.className = 'card';
+            card.innerHTML = `
+                <div class="card-menu" onclick="toggleMenu(this)">&#8942;
+                    <ul>
+                        <li onclick="editCard(this)">Editar</li>
+                        <li onclick="deleteCard(this)">Excluir</li>
+                    </ul>
+                </div>
+                <h3>${title}</h3>
+                ${image ? `<img src="${image}" alt="Imagem do Card">` : ''}
+                <p>${content}</p>
+                <button onclick="viewCard('${title}', '${content}', '${image}')">Ver Detalhes</button>
+            `;
+            cardsContainer.appendChild(card);
+        }
+
+        function saveCard(title, content, image) {
+            const cards = JSON.parse(localStorage.getItem('cards')) || [];
+            cards.push({ title, content, image });
+            localStorage.setItem('cards', JSON.stringify(cards));
+        }
+
+        function toggleMenu(element) {
+            const menu = element.querySelector('ul');
+            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+        }
+
+        function editCard(element) {
+            const card = element.closest('.card');
+            const title = card.querySelector('h3').innerText;
+            const content = card.querySelector('p').innerText;
+            const image = card.querySelector('img') ? card.querySelector('img').src : '';
+            cardTitle.value = title;
+            cardContent.value = content;
+            cardImage.value = '';
+            modal.style.display = 'flex';
+            saveCardBtn.onclick = function() {
+                card.querySelector('h3').innerText = cardTitle.value;
+                card.querySelector('p').innerText = cardContent.value;
+                if (cardImage.files && cardImage.files[0]) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        if (card.querySelector('img')) {
+                            card.querySelector('img').src = e.target.result;
+                        } else {
+                            const img = document.createElement('img');
+                            img.src = e.target.result;
+                            img.alt = 'Imagem do Card';
+                            card.insertBefore(img, card.querySelector('p'));
+                        }
+                        updateLocalStorage();
+                    };
+                    reader.readAsDataURL(cardImage.files[0]);
+                } else {
+                    if (card.querySelector('img')) {
+                        card.querySelector('img').remove();
+                    }
+                    updateLocalStorage();
+                }
+                modal.style.display = 'none';
+            };
+        }
+
+        function deleteCard(element) {
+            const card = element.closest('.card');
+            card.remove();
+            updateLocalStorage();
+        }
+
+        function viewCard(title, content, image) {
+            viewModalTitle.innerText = title;
+            viewModalContent.innerText = content;
+            if (image) {
+                viewModalImage.src = image;
+                viewModalImage.style.display = 'block';
+            } else {
+                viewModalImage.style.display = 'none';
+            }
+            viewModal.style.display = 'flex';
+        }
+
+        function updateLocalStorage() {
+            const cards = [];
+            document.querySelectorAll('.card').forEach(card => {
+                cards.push({
+                    title: card.querySelector('h3').innerText,
+                    content: card.querySelector('p').innerText,
+                    image: card.querySelector('img') ? card.querySelector('img').src : ''
+                });
+            });
+            localStorage.setItem('cards', JSON.stringify(cards));
+        }
+
+        addCardBtn.addEventListener('click', () => {
+            cardTitle.value = '';
+            cardContent.value = '';
+            cardImage.value = '';
+            modal.style.display = 'flex';
+        });
+
+        saveCardBtn.addEventListener('click', () => {
+            const title = cardTitle.value;
+            const content = cardContent.value;
+            if (title && content) {
+                if (cardImage.files && cardImage.files[0]) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        addCardToDOM(title, content, e.target.result);
+                        saveCard(title, content, e.target.result);
+                        modal.style.display = 'none';
+                    };
+                    reader.readAsDataURL(cardImage.files[0]);
+                } else {
+                    addCardToDOM(title, content, '');
+                    saveCard(title, content, '');
+                    modal.style.display = 'none';
+                }
+            }
+        });
+
+        closeModalBtn.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        closeViewModalBtn.addEventListener('click', () => {
+            viewModal.style.display = 'none';
+        });
+
+        window.onclick = function(event) {
+            if (event.target === modal || event.target === viewModal) {
+                modal.style.display = 'none';
+                viewModal.style.display = 'none';
+            }
+        };
+
+        loadCards();
+    </script>
+</body>
+</html>
