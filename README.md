@@ -38,6 +38,9 @@ Com base nesse protótipo, escreva em HTML essa página" (em anexo, uma imagem d
   <li>A página se adapta a diferentes tamanhos de tela.</li>
 </ul>
 
+##
+Documentação aqui: https://1drv.ms/w/c/fc6b73384ea1d244/EWoDEGdFZWJKjoakLCIFBP4B21CXfXFQmfWw2TfkikQpoA?e=iPtvTG
+
 ## Observações da autora
 O uso da ferramenta é 100% gratuito (ótimo para nós baixa renda) e se mostrou bastante eficiente, ela não fica para trás de sua concorrente (GPT).
 Comparando com suas concorrentes, utilizei poucos comandos para chegar onde queria.
