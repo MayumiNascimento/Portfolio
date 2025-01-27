@@ -2,10 +2,10 @@
 
 <p> A PortfolioPage foi desenvolvida para apresentar meus projetos de forma bonita, prática e acessível em qualquer plataforma, 
 sem a necessidade de instalar programas ou arquivos adicionais.  <br>
-  <b>Voce pode acessar por aqui (o link será publicado em breve..) </b></p>
 
 <br>
-<p> O projeto consiste em uma página web desenvolvida em HTML, CSS e JavaScript, <b>criada a partir de um protótipo elaborado no Figma</b>.  </p>
+<p> O projeto consiste em uma página web desenvolvida em HTML, CSS e JavaScript, <b>criada a partir de um protótipo elaborado no Figma</b>. <br>
+Futuramente será inserido o backend para o site ir ao ar.</p>
 
 [Link do Protótipo no Figma](https://www.figma.com/design/XC2AbB53uQ4ULVMxpth1ql/portfolio?node-id=0-1&p=f&t=hFPI8OhuYfA4AnwS-0)
 
@@ -37,9 +37,6 @@ Com base nesse protótipo, escreva em HTML essa página" (em anexo, uma imagem d
 <ul>
   <li>A página se adapta a diferentes tamanhos de tela.</li>
 </ul>
-
-##
-Documentação aqui: https://1drv.ms/w/c/fc6b73384ea1d244/EWoDEGdFZWJKjoakLCIFBP4B21CXfXFQmfWw2TfkikQpoA?e=iPtvTG
 
 ## Observações da autora
 O uso da ferramenta é 100% gratuito (ótimo para nós baixa renda) e se mostrou bastante eficiente, ela não fica para trás de sua concorrente (GPT).
