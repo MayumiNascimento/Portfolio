@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Belesys",
+    "content": "O Belesys é um sistema web completo desenvolvido para auxiliar salões de beleza em sua organização interna. A aplicação conta com uma interface intuitiva, acessível por qualquer dispositivo com internet, e separa funcionalidades entre os perfis de administrador e funcionário.",
+    "image": "images/Belesys.png",
+    "technologies": ["React", "Bootstrap", "Node"],
+    "link": "https://github.com/MayumiNascimento/projeto-salao-front"
+  },
+  {
+    "title": "Adopet [Alura Challenge]",
+    "content": "Um site de apresentação de uma ONG(ficticia) baseado nos critérios de acessibilidade.",
+    "image": "images/adopet.png",
+    "technologies": ["HTML5", "CSS3", "JavaScript"],
+    "link": "https://github.com/MayumiNascimento/Site"
+  },
+  {
+    "title": "Orange Portfolio",
+    "content": "Aplicação web desenvolvido em um hackaton para a FCamara, que permite aos usuários cadastrar e exibir seus projetos desenvolvidos",
+    "image": "images/orangePort.png",
+    "technologies": ["React", "MaterialUI"],
+    "link": "https://github.com/PedroFonseca447/orange-portifolio-squad15"
+  },
+  {
+    "title": "Informativo de curso técnico",
+    "content": "Uma página HTML com conteúdo informativo sobre o curso técnico Desenvolvimento de Sistemas da Etec de Praia Grande. Atividade para a disciplina Desenvolvimento de Sistemas I",
+    "image": "images/curso.png",
+    "technologies": ["HTML", "CSS3"],
+    "link": "https://github.com/MayumiNascimento/CursoDS"
+  },
+  {
+    "title": "Car-Park",
+    "content": "Aplicação Mobile para ajudar motoristas a encontrar e agendar vagas em estacionamentos. O projeto acadêmico contou com a participação de outros alunos em seu desenvolvimento.",
+    "image": "",
+    "technologies": ["HTML5", "CSS3", "JavaScript"],
+    "link": "https://github.com/MayumiNascimento/Car-Park"
+  },
+  {
+    "title": "Agenda interativa",
+    "content": "Aplicação web de uma Agenda de uso profissional para organização de serviços e compromissos",
+    "image": "images/Agenda.png",
+    "technologies": ["React", "PHP", "Laravel"],
+    "link": "https://github.com/MayumiNascimento/CrudAgendamentos"
+  },
+  {
+    "title": "App briefings [Em andamento] ",
+    "content": "Aplicação Mobile para ajudar prestadores de serviços a organizar e armazenar as informações fornecidas por clientes.",
+    "image": "",
+    "technologies": ["React-native", "Styled-components"],
+    "link": "https://snack.expo.dev/@yumi00/55a49a"
+  },  
+  {
+    "title": "Adote-me! [Em andamento]",
+    "content": "Aplicação Mobile para divulgação sobre a ONG, seus animais para adoção e facilitar o meio para doações.",
+    "image": "",
+    "technologies": ["React-native", "Styled-components"],
+    "link": "https://snack.expo.dev/@yumi00/projeto-p1"
+  }
+]
