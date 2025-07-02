@@ -7,4 +7,4 @@
 - **JavaScript**
 - **GitHub Pages** 
 
-### Acesse [aqui](https://www.brasilcode.com.br/projetos-de-romanticos-amor-feito-com-html-e-css/)
+### Acesse [aqui](https://mayuminascimento.github.io/Portfolio/)
