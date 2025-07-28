@@ -7,11 +7,18 @@
     "link": "https://github.com/MayumiNascimento/projeto-salao-front"
   },
   {
-    "title": "Adopet [Alura Challenge]",
-    "content": "Um site de apresentação de uma ONG(ficticia) baseado nos critérios de acessibilidade.",
+    "title": "Adopet ",
+    "content": "[baseado no Alura Chalenge 3 front end] Um site de apresentação de uma ONG(ficticia) baseado nos critérios de acessibilidade.",
     "image": "images/adopet.png",
-    "technologies": ["HTML5", "CSS3", "JavaScript"],
+    "technologies": ["HTML5", "CSS3", "JavaScript", "Acessibilidade"],
     "link": "https://github.com/MayumiNascimento/Site"
+  },
+  {
+    "title": "Meu Salão",
+    "content": "Site no estilo One Page Scroll para apresentar um salão de beleza",
+    "image": "images/siteonepage.png",
+    "technologies": ["NextJS", "Tailwind"],
+    "link": "https://github.com/MayumiNascimento/SiteSalao"
   },
   {
     "title": "Orange Portfolio",
@@ -33,13 +40,6 @@
     "image": "",
     "technologies": ["HTML5", "CSS3", "JavaScript"],
     "link": "https://github.com/MayumiNascimento/Car-Park"
-  },
-  {
-    "title": "Agenda interativa",
-    "content": "Aplicação web de uma Agenda de uso profissional para organização de serviços e compromissos",
-    "image": "images/Agenda.png",
-    "technologies": ["React", "PHP", "Laravel"],
-    "link": "https://github.com/MayumiNascimento/CrudAgendamentos"
   },
   {
     "title": "App briefings [Em andamento] ",
