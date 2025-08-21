@@ -1,14 +1,14 @@
 [
   {
     "title": "Belesys",
-    "content": "O Belesys é um sistema web completo desenvolvido para auxiliar salões de beleza em sua organização interna. A aplicação conta com uma interface intuitiva, acessível por qualquer dispositivo com internet, e separa funcionalidades entre os perfis de administrador e funcionário.",
+    "content": "Solução para a gestão de salões de beleza. Um sistema web completo para otimizar a organização interna através de uma interface intuitiva e responsiva. O sistema segrega funcionalidades por perfil de usuário, garantindo segurança e controle de acesso.",
     "image": "images/Belesys.png",
-    "technologies": ["React", "Bootstrap", "Node"],
-    "link": "https://github.com/MayumiNascimento/projeto-salao-front"
+    "technologies": ["React", "Bootstrap", "Node", "mysql"],
+    "link": "https://ric.cps.sp.gov.br/handle/123456789/34785"
   },
   {
     "title": "Adopet ",
-    "content": "[baseado no Alura Chalenge 3 front end] Um site de apresentação de uma ONG(ficticia) baseado nos critérios de acessibilidade.",
+    "content": "[baseado no Alura Challenge 3 front end] Uma landing Page para uma ONG ficticia baseada nos critérios de acessibilidade digital.",
     "image": "images/adopet.png",
     "technologies": ["HTML5", "CSS3", "JavaScript", "Acessibilidade"],
     "link": "https://github.com/MayumiNascimento/Site"
@@ -21,8 +21,15 @@
     "link": "https://github.com/MayumiNascimento/SiteSalao"
   },
   {
+    "title": "Cronometer",
+    "content": "Aplicação web para cronometrar atividades, gerenciar o tempo gasto em atividades e apresentar os dados de forma visual através de gráficos.",
+    "image": "images/cronometer.png",
+    "technologies": ["React", "Node", "SQLite"],
+    "link": "https://github.com/MayumiNascimento/Cronometer"
+  },
+  {
     "title": "Orange Portfolio",
-    "content": "Aplicação web desenvolvido em um hackaton para a FCamara, que permite aos usuários cadastrar e exibir seus projetos desenvolvidos",
+    "content": "Aplicação web desenvolvida em equipe durante um hackathon promovido pela FCamara. O sistema funciona como uma plataforma de portfólio, onde usuários podem cadastrar, visualizar e gerenciar seus projetos, facilitando a exposição de seus trabalhos para a comunidade",
     "image": "images/orangePort.png",
     "technologies": ["React", "MaterialUI"],
     "link": "https://github.com/PedroFonseca447/orange-portifolio-squad15"
@@ -36,21 +43,14 @@
   },
   {
     "title": "Car-Park",
-    "content": "Aplicação Mobile para ajudar motoristas a encontrar e agendar vagas em estacionamentos. O projeto acadêmico contou com a participação de outros alunos em seu desenvolvimento.",
+    "content": "Aplicação mobile para solucionar a dificuldade de encontrar vagas de estacionamento. O Car-Park permite que motoristas localizem e agendem vagas de forma antecipada. O projeto acadêmico contou com a participação de outros alunos em seu desenvolvimento.",
     "image": "",
     "technologies": ["HTML5", "CSS3", "JavaScript"],
     "link": "https://github.com/MayumiNascimento/Car-Park"
-  },
-  {
-    "title": "App briefings [Em andamento] ",
-    "content": "Aplicação Mobile para ajudar prestadores de serviços a organizar e armazenar as informações fornecidas por clientes.",
-    "image": "",
-    "technologies": ["React-native", "Styled-components"],
-    "link": "https://snack.expo.dev/@yumi00/55a49a"
-  },  
+  }, 
   {
     "title": "Adote-me! [Em andamento]",
-    "content": "Aplicação Mobile para divulgação sobre a ONG, seus animais para adoção e facilitar o meio para doações.",
+    "content": "Uma aplicação mobile focada em apoiar ONGs de animais. O app servirá como plataforma para divulgar a organização, apresentar animais disponíveis para adoção e facilitar o processo de doações e apadrinhamentos.",
     "image": "",
     "technologies": ["React-native", "Styled-components"],
     "link": "https://snack.expo.dev/@yumi00/projeto-p1"
